@@ -1,0 +1,99 @@
+custom-calender {
+    margin: 0;padding: 0;
+    .calendar{
+        width:90%;
+        margin: 0 auto;
+        // margin:10px 0px 20px 0px;
+        // color:#555;
+        color: $black;
+        position: relative;
+
+        h4{
+            text-align: center;
+            font-size: 22px;
+            font-weight: 700;
+            margin-top: 10px;
+            margin-bottom:0px;
+            padding: 10px 0;
+        }
+        button{
+            position: absolute;
+            width: 24px;
+            height: 24px;
+            top: 15px;
+            border: none;
+
+            &:focus{
+                border: none;
+                outline: none;
+            }
+            
+            // &.month-less{
+            //     left: 20px;
+            //     background: url(img/left-icon.png) no-repeat left -60px;
+            // }
+            // &.month-add{
+            //     right: 20px;
+            //     background: url(img/right-icon.png) no-repeat left -60px;
+            // }
+            &.sign_btn {
+                background-color:#555555; width: 100px; height: 60px;
+            }
+        }
+
+        .sign_tab{
+            width: 100%;
+            border-collapse: collapse;
+            border-top: 0;
+            table-layout: fixed;
+
+            th{
+                text-align: center;
+                height: 2.25rem;
+                font-weight: 700;
+            }
+            td{
+                height: 2.25rem;
+                text-align: center;
+                font-size: 0.8rem;
+                font-family: arial;
+
+                padding-bottom: 15px;
+                padding-top: 10px;
+
+                &.over{
+                    background-color: #fff;
+                    border-left: 0;
+                    border-right: 0;
+                }
+
+                &.red_tbg{
+                    position:relative;
+                    i {
+                        color: $red;
+                        font-size: 14px;
+                    }
+                }
+                &.cur_day{
+                    padding-bottom: 10px;
+                    > div {
+                        width: 50%;
+                        margin: 0 auto;
+                        border-bottom: 3px solid $red;
+                        padding-bottom: 2px;
+                    }
+                }
+            }
+        }
+        
+    }
+    .red_tbg .ui-state-default {
+        font-size: 0.6em;
+        width: 100%;
+        text-align: center; 
+        position: absolute;
+        top:2rem;
+        left: 0;
+    }
+}
+
